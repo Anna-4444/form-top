@@ -76,7 +76,7 @@ h1 {
     font-size: 3rem;
 }
 
-p {
+h2 {
   padding-top: 1rem;
 }
 
@@ -99,15 +99,11 @@ header .banner {
     padding: 1rem 0;
 }
 
-header .logo {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.material-symbols-outlined {
+.fa-leaf {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
+  position: relative;
+  top: 1rem;
 }
 
 main {
@@ -116,8 +112,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    /* width: min(80ch, 100%); */
-    /* margin: 0px auto; */
 }
 
 section {
@@ -145,19 +139,20 @@ form div {
   position: relative;
 }
 
-i {
+.fa-eye {
   color: rgb(49, 48, 48);
   position: absolute;
   right: 10px;
   top: 3.25rem;
 }
 
-i:hover {
+.fa-eye:hover {
   cursor: pointer;
 }
 
 input {
   padding-top: 0.5rem;
+  color: black;
 }
 
 fieldset {
@@ -204,6 +199,7 @@ fieldset {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
+  margin-bottom: 1rem;
 }
 
 .submit:hover {
