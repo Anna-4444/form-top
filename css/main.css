@@ -99,9 +99,14 @@ header .banner {
     padding: 1rem 0;
 }
 
+header .logo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .material-symbols-outlined {
   color: white;
-  padding-top: 1rem;
   font-size: 2rem;
 }
 
@@ -111,8 +116,8 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    width: min(80ch, 100%);
-    margin: 0px auto;
+    /* width: min(80ch, 100%); */
+    /* margin: 0px auto; */
 }
 
 section {
@@ -129,14 +134,6 @@ section {
   padding: 2rem;
 }
 
-fieldset {
-  border: none;
-}
-
-.create-login {
-  padding: 2rem;
-}
-
 form div {
   display: flex;
   flex-direction: column;
@@ -148,16 +145,42 @@ input {
   padding-top: 0.5rem;
 }
 
-input:focus {
-  border-color: blue;
+fieldset {
+  border: none;
 }
 
-input:valid {
-  border-color: green;
+#message p {
+  padding: 0px;
 }
 
-input:invalid {
-  border-color: red;
+.hide {
+  display: none;
+}
+
+.valid {
+  color: rgb(187, 241, 187);
+}
+
+.valid::before {
+  content: "~";
+  position: relative;
+  left: -10px;
+  font-weight: bold;
+}
+
+.invalid {
+  color: rgb(241, 164, 164);
+}
+ 
+.invalid::before {
+  content: "X";
+  position: relative;
+  left: -10px;
+  font-weight: bold;
+}
+
+.create-login {
+  padding: 2rem;
 }
 
 .submit {
@@ -165,16 +188,28 @@ input:invalid {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  border: none;
+}
+
+.submit:hover {
+  box-shadow: 0px 0px 5px 5px #5f8349;
 }
 
 a {
   color: #5f8349;
   text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #304623;
 }
 
 @media only screen and (min-width: 768px) {
   body {
     flex-direction: row;
+    width: 100vw;
+    height: 100vh;
   }
   header {
     min-width: 30vw;
@@ -186,6 +221,11 @@ a {
 }
   form div {
     width: 40%;
+  }
+  .info,
+  .form,
+  .create-login {
+    padding:2rem max(7%, 2rem);
   }
 
 }
