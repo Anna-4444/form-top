@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6326a1fc23.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -50,13 +51,15 @@
                             <label for="phone">PHONE NUMBER *</label>
                             <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" maxlength="12" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" title="Phone Number must be in this format XXX-XXX-XXXX" required>
                         </div>
-                        <div>
+                        <div class="pswd-parent">
                             <label for="password">PASSWORD *</label>
                             <input type="password" id="password" name="password" minlength="8" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8, 20}$" title="Must contain at least one lowercase letter and one uppercase letter and one number, and be 8 to 20 characters long" required>
+                            <i class="fa-regular fa-eye"></i>
                         </div>
-                        <div>
+                        <div class="pswd-parent">
                             <label for="confirm-password">CONFIRM PASSWORD *</label>
                             <input type="password" id="confirm-password" name="confirm-password" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8, 20}$" required>
+                            <!-- <i class="fa-regular fa-eye"></i> -->
                         </div>
                         <div id="message" class="hide">
                             <h3>Passwod must contain the following:</h3>

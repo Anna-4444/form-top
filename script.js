@@ -6,6 +6,7 @@ const number = document.querySelector("#number");
 const lengths = document.querySelector("#length");
 const createAccBtn = document.querySelector(".submit");
 const confirm = document.querySelector("#confirm-password")
+const eyeIcon = document.querySelector(".fa-eye")
 
 password.addEventListener("focus", function() {
     message.classList.remove("hide");
@@ -57,5 +58,18 @@ createAccBtn.addEventListener("click", function() {
         form.submit();
     } else {
         alert("Password confirmation must match password. Try again.")
+    }
+});
+
+eyeIcon.addEventListener("click", function() {
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+    if (confirm.type === "password") {
+        confirm.type = "text";
+    } else {
+        confirm.type = "password";
     }
 });
